@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "prompt": "\\sin(A + B) = ?",
+    "answer": "\\sin A \\cos B + \\cos A \\sin B"
+  },
+  {
+    "id": 2,
+    "prompt": "\\cos(A + B) = ?",
+    "answer": "\\cos A \\cos B - \\sin A \\sin B"
+  },
+  {
+    "id": 3,
+    "prompt": "\\sin(A - B) = ?",
+    "answer": "\\sin A \\cos B - \\cos A \\sin B"
+  },
+  {
+    "id": 4,
+    "prompt": "\\cos(A - B) = ?",
+    "answer": "\\cos A \\cos B + \\sin A \\sin B"
+  },
+  {
+    "id": 5,
+    "prompt": "\\tan(A + B) = ?",
+    "answer": "\\frac{\\tan A + \\tan B}{1 - \\tan A \\tan B}"
+  },
+  {
+    "id": 6,
+    "prompt": "\\tan(A - B) = ?",
+    "answer": "\\frac{\\tan A - \\tan B}{1 + \\tan A \\tan B}"
+  },
+  {
+    "id": 7,
+    "prompt": "\\sin 2A = ?",
+    "answer": "2 \\sin A \\cos A"
+  },
+  {
+    "id": 8,
+    "prompt": "\\cos 2A = ?",
+    "answer": "\\cos^2 A - \\sin^2 A"
+  },
+  {
+    "id": 9,
+    "prompt": "\\tan 2A = ?",
+    "answer": "\\frac{2 \\tan A}{1 - \\tan^2 A}"
+  },
+  {
+    "id": 10,
+    "prompt": "\\sin^2 A + \\cos^2 A = ?",
+    "answer": "1"
+  }
+]
