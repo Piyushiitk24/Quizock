@@ -9,9 +9,44 @@ Currently, two official plugins are available:
 
 # Quizock 🎯
 
-A comprehensive TypeScript-based web application for NDA mathematics preparation, featuring interactive formula flashcards and full-scale mock tests.
+# 🎯 Quizock - NDA Mathematics Preparation Tool
 
-## 🌟 Features
+[![Build Status](https://github.com/Piyushiitk24/Quizock/actions/workflows/deploy.yml/badge.svg)](https://github.com/Piyushiitk24/Quizock/actions/workflows/deploy.yml)
+[![TypeScript](https://img.shields.io/badge/TypeScript-4.9+-blue.svg)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-18+-61DAFB.svg)](https://reactjs.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-green.svg)](https://piyushiitk24.github.io/Quizock/)
+
+A comprehensive, modern web application designed specifically for NDA (National Defence Academy) mathematics preparation. Built with React, TypeScript, and Tailwind CSS for an optimal learning experience.
+
+## 🚀 Deployment
+
+### Automatic Deployment (GitHub Pages)
+The project is configured for automatic deployment to GitHub Pages:
+
+1. **Enable GitHub Pages**:
+   - Go to your repository settings
+   - Navigate to Pages section
+   - Source: Deploy from a branch
+   - Branch: `gh-pages`
+   - Click Save
+
+2. **Automatic Process**:
+   - Every push to `main` branch triggers the CI/CD pipeline
+   - Builds the project with `npm run build`
+   - Deploys to `gh-pages` branch automatically
+   - Your app will be available at: `https://[username].github.io/Quizock/`
+
+### Manual Deployment
+```bash
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages (using gh-pages package)
+npm run deploy
+```
+
+## 🧪 Development
 
 ### Core Functionality
 - **Simplified User Authentication**: No email/signup required - just enter your name and start learning
@@ -34,10 +69,14 @@ A comprehensive TypeScript-based web application for NDA mathematics preparation
 - **Data Visualization**: Interactive charts showing performance trends
 - **LaTeX Support**: Mathematical formulas rendered beautifully with react-latex-next
 
-## 🚀 Getting Started
+## 🚀 Live Demo
 
+Access the live application: **[Quizock Live Demo](https://piyushiitk24.github.io/Quizock/)**
+
+> **Note**: To enable GitHub Pages deployment, go to your repository settings → Pages → Source: Deploy from a branch → Branch: `gh-pages` → Save
+
+## 🚀 Quick Start
 ### Prerequisites
-- Node.js 20.19.0 or higher
 - npm or yarn package manager
 
 ### Installation
