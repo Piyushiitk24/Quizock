@@ -1,14 +1,3 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-# Quizock 🎯
-
 # 🎯 Quizock - NDA Mathematics Preparation Tool
 
 [![Build Status](https://github.com/Piyushiitk24/Quizock/actions/workflows/deploy.yml/badge.svg)](https://github.com/Piyushiitk24/Quizock/actions/workflows/deploy.yml)
@@ -42,8 +31,26 @@ The project is configured for automatic deployment to GitHub Pages:
 # Build for production
 npm run build
 
-# Deploy to GitHub Pages (using gh-pages package)
+# Deploy using the provided script (recommended)
+./deploy.sh
+
+# Or manually deploy to GitHub Pages
 npm run deploy
+```
+
+### Easy Deployment Script
+The project includes a convenient `deploy.sh` script that:
+1. Builds the project
+2. Copies built files to root directory  
+3. Commits and pushes changes to GitHub
+4. Automatically deploys to GitHub Pages
+
+```bash
+# Make script executable (one time only)
+chmod +x deploy.sh
+
+# Deploy with one command
+./deploy.sh
 ```
 
 ## 🧪 Development
@@ -73,7 +80,12 @@ npm run deploy
 
 Access the live application: **[Quizock Live Demo](https://piyushiitk24.github.io/Quizock/)**
 
-> **Note**: To enable GitHub Pages deployment, go to your repository settings → Pages → Source: Deploy from a branch → Branch: `gh-pages` → Save
+> **✅ GitHub Pages Fixed**: The application now properly renders with full styling and functionality on GitHub Pages. Recent fixes include:
+> - HashRouter for GitHub Pages compatibility
+> - CSS compilation fixes for Tailwind CSS
+> - Proper asset routing and deployment configuration
+
+> **Note**: To enable GitHub Pages deployment, go to your repository settings → Pages → Source: Deploy from a branch → Branch: `main` → Folder: `/ (root)` → Save
 
 ## 🚀 Quick Start
 ### Prerequisites
