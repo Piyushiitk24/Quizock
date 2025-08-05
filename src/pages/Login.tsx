@@ -25,13 +25,12 @@ export const Login: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center" style={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
-      <div className="container">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+      <div className="w-full max-w-md">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="max-w-md mx-auto"
         >
           {/* Header */}
           <div className="text-center mb-8">
@@ -39,36 +38,27 @@ export const Login: React.FC = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-              className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-2xl shadow-lg mb-6"
+              className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-2xl shadow-lg mb-6 mx-auto"
             >
-              <span className="text-4xl">🎯</span>
+              <span className="text-3xl text-white font-bold">Q</span>
             </motion.div>
             
             <motion.h1
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="text-4xl font-bold text-white mb-2"
+              className="text-3xl font-bold text-gray-900 mb-2"
             >
-              Quizock
+              Welcome to Quizock
             </motion.h1>
             
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-white/90 text-lg"
+              className="text-gray-600"
             >
-              NDA Mathematics Preparation
-            </motion.p>
-            
-            <motion.p
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.8 }}
-              className="text-white/70 mt-2"
-            >
-              Master formulas, ace your exams
+              Your NDA Mathematics preparation companion
             </motion.p>
           </div>
 
@@ -76,9 +66,9 @@ export const Login: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 1 }}
+            transition={{ delay: 0.8 }}
           >
-            <Card elevated>
+            <Card>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="text-center">
                   <h2 className="text-xl font-semibold text-gray-900 mb-2">
@@ -127,19 +117,19 @@ export const Login: React.FC = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 1.2 }}
+            transition={{ delay: 1.0 }}
             className="mt-8 grid grid-cols-2 gap-4"
           >
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
               <div className="text-2xl mb-2">⚡</div>
-              <h3 className="font-medium text-white text-sm">Formula Flashcards</h3>
-              <p className="text-white/70 text-xs mt-1">Quick recall training</p>
+              <h3 className="font-medium text-gray-900 text-sm">Formula Flashcards</h3>
+              <p className="text-gray-600 text-xs mt-1">Quick recall training</p>
             </div>
             
-            <div className="text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
+            <div className="text-center p-4 bg-white border border-gray-200 rounded-lg shadow-sm">
               <div className="text-2xl mb-2">📝</div>
-              <h3 className="font-medium text-white text-sm">Mock Tests</h3>
-              <p className="text-white/70 text-xs mt-1">Exam simulation</p>
+              <h3 className="font-medium text-gray-900 text-sm">Mock Tests</h3>
+              <p className="text-gray-600 text-xs mt-1">Exam simulation</p>
             </div>
           </motion.div>
 
@@ -147,8 +137,8 @@ export const Login: React.FC = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 1.4 }}
-            className="text-center mt-8 text-white/60 text-sm"
+            transition={{ delay: 1.2 }}
+            className="text-center mt-8 text-gray-500 text-sm"
           >
             <p>Built for aspiring defence officers</p>
           </motion.div>
