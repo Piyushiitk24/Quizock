@@ -6,6 +6,7 @@ interface CardProps {
   className?: string;
   onClick?: () => void;
   hover?: boolean;
+  elevated?: boolean;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -13,24 +14,27 @@ export const Card: React.FC<CardProps> = ({
   className = '',
   onClick,
   hover = false,
+  elevated = false,
 }) => {
-  const baseClasses = 'glass-effect p-6 shadow-lg';
-  const hoverClasses = hover || onClick ? 'cursor-pointer hover:shadow-xl hover:bg-white/20' : '';
-  const classes = `${baseClasses} ${hoverClasses} ${className}`;
+  const baseClasses = 'card';
+  const elevatedClass = elevated ? 'card-elevated' : '';
+  const hoverClasses = hover || onClick ? 'feature-card' : '';
+  const classes = `${baseClasses} ${elevatedClass} ${hoverClasses} ${className}`;
 
   const cardContent = (
     <div className={classes}>
-      {children}
+      <div className="p-6">
+        {children}
+      </div>
     </div>
   );
 
   if (onClick || hover) {
     return (
       <motion.div
-        whileHover={{ scale: 1.02, y: -5 }}
+        whileHover={{ scale: 1.02, y: -2 }}
         whileTap={{ scale: 0.98 }}
         onClick={onClick}
-        className="cursor-pointer"
       >
         {cardContent}
       </motion.div>

@@ -16,14 +16,14 @@ export const LaTeX: React.FC<LaTeXProps> = ({
   try {
     if (block) {
       return (
-        <div className={`latex-container ${className}`}>
+        <div className={`math-container ${className}`}>
           <BlockMath math={children} />
         </div>
       );
     }
     
     return (
-      <span className={`inline-latex ${className}`}>
+      <span className={`inline-math ${className}`}>
         <InlineMath math={children} />
       </span>
     );
@@ -31,7 +31,7 @@ export const LaTeX: React.FC<LaTeXProps> = ({
     // Fallback to plain text if LaTeX fails to render
     console.warn('LaTeX rendering failed:', error);
     return (
-      <span className={`font-mono text-yellow-300 ${className}`}>
+      <span className={`font-mono bg-gray-100 px-2 py-1 rounded text-gray-800 ${className}`}>
         {children}
       </span>
     );
