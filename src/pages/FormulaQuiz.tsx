@@ -9,6 +9,7 @@ import { ProgressBar } from '../components/quiz/ProgressBar';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
 import { Loader } from '../components/ui/Loader';
+import { LaTeX } from '../components/ui/LaTeX';
 import trigFormulasData from '../data/trigFormulas.json';
 
 const FORMULA_TIME_LIMIT = 10; // seconds per formula
@@ -160,11 +161,13 @@ export const FormulaQuiz: React.FC = () => {
             </div>
 
             <div className="mb-8">
-              <h2 className="text-2xl font-semibold text-white mb-4">
+              <h2 className="text-2xl font-semibold text-white mb-6">
                 Complete this formula:
               </h2>
-              <div className="text-4xl font-mono bg-slate-800/50 p-6 rounded-lg border border-white/20">
-                {currentQuestion.prompt}
+              <div className="bg-slate-900/70 p-8 rounded-2xl border border-purple-500/30 backdrop-blur-sm">
+                <LaTeX block className="text-3xl">
+                  {currentQuestion.prompt}
+                </LaTeX>
               </div>
             </div>
 
@@ -172,11 +175,13 @@ export const FormulaQuiz: React.FC = () => {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="mt-8 p-6 bg-green-900/30 border border-green-600/50 rounded-lg"
+                className="mt-8 p-8 bg-green-900/30 border border-green-400/50 rounded-2xl backdrop-blur-sm"
               >
-                <h3 className="text-green-300 font-semibold mb-3">Answer:</h3>
-                <div className="text-2xl font-mono text-green-200">
-                  {currentQuestion.answer}
+                <h3 className="text-green-300 font-semibold mb-4 text-xl">Answer:</h3>
+                <div className="bg-green-950/50 p-6 rounded-xl border border-green-400/20">
+                  <LaTeX block className="text-2xl text-green-100">
+                    {currentQuestion.answer}
+                  </LaTeX>
                 </div>
               </motion.div>
             )}
