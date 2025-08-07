@@ -22,3 +22,81 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Additional Quizock-specific ignores
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.staging
+
+# Production builds
+build/
+*.tgz
+*.tar.gz
+
+# Database files
+data/
+mongo-data/
+mongodb-data/
+backup/
+*.dump
+*.sql
+
+# CSV import files (temporary)
+uploads/
+temp/
+
+# SSL certificates
+*.pem
+*.crt
+*.key
+
+# OS generated files
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package managers
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Testing
+.coverage/
+coverage/
+test-results/
+*.test.log
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Sessions
+sessions/
+
+# Uploads directory (for CSV imports)
+public/uploads/
+
+# MongoDB compass connections
+mongodb-compass/
+
+# Application specific
+quiz-data/
+student-uploads/
+question-images/
+temp-exports/
+
+# Security
+secrets.json
+.secrets
+private/
+*.private
