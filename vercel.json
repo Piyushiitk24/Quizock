@@ -1,0 +1,24 @@
+{
+  "functions": ["error", "warn", "info", "verbose"],
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ],
+  "env": {
+    "MONGODB_URI": "@mongodb_uri",
+    "SESSION_SECRET": "@session_secret",
+    "ADMIN_PASSWORD": "@admin_password"
+  }
+}
