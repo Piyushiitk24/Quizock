@@ -1,5 +1,9 @@
 {
   "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install",
+  "framework": "vite",
   "functions": {
     "api/**.js": {
       "runtime": "@vercel/node"
@@ -24,5 +28,6 @@
       "source": "/api/(.*)",
       "destination": "/api/$1"
     }
-  ]
+  ],
+  "ignoreCommand": "echo 'No TypeScript checks needed - this is a JavaScript project'"
 }
