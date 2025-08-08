@@ -1,24 +1,37 @@
 {
-  "functions": ["error", "warn", "info", "verbose"],
   "builds": [
     {
       "src": "index.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "dist/**",
+      "use": "@vercel/static"
     }
   ],
   "routes": [
+    {
+      "src": "/auth/(.*)",
+      "dest": "/index.js"
+    },
     {
       "src": "/api/(.*)",
       "dest": "/index.js"
     },
     {
+      "src": "/admin/(.*)",
+      "dest": "/index.js"
+    },
+    {
+      "src": "/(.*\\.(js|css|png|jpg|svg|ico|woff|woff2|ttf|eot))",
+      "dest": "/dist/$1"
+    },
+    {
       "src": "/(.*)",
-      "dest": "/index.html"
+      "dest": "/dist/index.html"
     }
   ],
   "env": {
-    "MONGODB_URI": "@mongodb_uri",
-    "SESSION_SECRET": "@session_secret",
-    "ADMIN_PASSWORD": "@admin_password"
+    "NODE_ENV": "production"
   }
 }
