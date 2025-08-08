@@ -1,24 +1,16 @@
 {
-  "builds": [
-    {
-      "src": "index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "routes/**",
-          "models/**",
-          "dist/**"
-        ]
-      }
+  "functions": {
+    "api/**.js": {
+      "runtime": "@vercel/node@3"
     }
-  ],
+  },
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "/index.js"
+      "dest": "/api/$1"
     },
     {
-      "src": "/(.*\\.(js|css|png|jpg|svg|ico|woff|woff2|ttf|eot))",
+      "src": "/(.*\\.(js|css|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot|otf|webp|mp4|mp3|wav|ogg|pdf))",
       "dest": "/dist/$1"
     },
     {
@@ -26,7 +18,10 @@
       "dest": "/dist/index.html"
     }
   ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ]
 }
