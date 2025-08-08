@@ -2,24 +2,19 @@
   "builds": [
     {
       "src": "index.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "dist/**",
-      "use": "@vercel/static"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "routes/**",
+          "models/**",
+          "dist/**"
+        ]
+      }
     }
   ],
   "routes": [
     {
-      "src": "/auth/(.*)",
-      "dest": "/index.js"
-    },
-    {
       "src": "/api/(.*)",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/admin/(.*)",
       "dest": "/index.js"
     },
     {
